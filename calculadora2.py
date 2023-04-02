@@ -1,15 +1,27 @@
 print("Digite um número")
-a=int(input())   
-print("\nAgora bote a operação\nElevado a 2 = r          Vezes = *\nDivisão = /")
+a=float(input())   
+print("\nAgora bote a operação\nElevado a 2 = e          Vezes = *\nDivisão = /              Mais = +\nMenos = -                Raiz quadrada = r\nOperac. inversa = i")
 c=input()
 c=c.lower()
 
-if c=="r":
+
+if c=="e":
+    print("\nResultado:")
     print(a**2)
     quit ()
 
-print("Finalmente, o último número")                   #tema - raiz quadrada e operação inversa
-b=int(input())
+elif c=="r":
+    print("\nResultado:")
+    print(a**0.5)
+    quit()
+
+elif c=="i":
+    print("\nResultado:")
+    print(1/a)
+    quit()
+
+print("\nFinalmente, o último número")                   #tema - raiz quadrada e operação inversa
+b=float(input())
 
 print("\nResultado:")
 
