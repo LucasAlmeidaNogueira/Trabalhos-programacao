@@ -1,6 +1,6 @@
 print("Digite um número")
 a=float(input())   
-print("\nAgora bote a operação\nElevado a 2 = e          Vezes = *\nDivisão = /              Mais = +\nMenos = -                Raiz quadrada = r\nOperac. inversa = i")
+print("\nAgora bote a operação\nElevado a 2 = e          Vezes = *\nDivisão = /              Mais = +\nMenos = -                Raiz quadrada = r\nOperac. inversa = i      Elevado = ^")
 c=input()
 c=c.lower()
 
