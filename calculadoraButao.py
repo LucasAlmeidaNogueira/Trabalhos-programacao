@@ -1,17 +1,33 @@
 import tkinter as tk
 janela=tk.Tk()
-funcao=str()
+calculo=str()
 
 def inserir_texto(a):
     
-    global funcao
+    global calculo
     texto.delete(1.0,"end")
     
-    funcao=funcao+a
-    texto.insert(1.0,funcao)
+    calculo=calculo+a
+    texto.insert(1.0,calculo)
 
-texto=tk.Text(janela,height=2, width=16,font=("Arial", 25))
-texto.grid(columnspan=4)
+def apagar_tudo():
+
+    global calculo
+    calculo=str()
+    texto.delete(1.0, "end")
+
+
+def calcular():
+
+    global calculo
+    x=str(eval(texto.get(1.0, "end")))
+    
+    calculo=str()
+    inserir_texto(x)
+    
+
+texto=tk.Text(janela,height=2, width=23,font=("Arial", 25))
+texto.grid(columnspan=5)
 
 
 butao1=tk.Button(janela, text="1", width=8, height=3, font=("Arial", 15), command=lambda:inserir_texto("1"))
@@ -40,27 +56,23 @@ butaoFParenteses=tk.Button(janela, text=")", width=8, height=3, font=("Arial", 1
 butaoFParenteses.grid(column=3, row=4, )
 
 
-butaoIgual=tk.Button(janela, text="=", width=11, height=3, font=("Arial", 15), command=lambda:inserir_texto("="))
-butaoIgual.grid(column=4, row=0, )
+butaoIgual=tk.Button(janela, text="=", width=17, height=3, font=("Arial", 15), command=lambda:calcular())
+butaoIgual.grid(column=1, row=5, columnspan=2 )
 butaoMais=tk.Button(janela, text="+", width=11, height=3, font=("Arial", 15), command=lambda:inserir_texto("+"))
 butaoMais.grid(column=4, row=2, )
 butaoMenos=tk.Button(janela, text="-", width=11, height=3, font=("Arial", 15), command=lambda:inserir_texto("-"))
 butaoMenos.grid(column=4, row=3, )
-butaoBackspace=tk.Button(janela, text="⌫", width=11, height=3, font=("Arial", 15), command=lambda:inserir_texto(""))
-butaoBackspace.grid(column=4, row=1, )
 butaoVezes=tk.Button(janela, text="X", width=11, height=3, font=("Arial", 15), command=lambda:inserir_texto("*"))
 butaoVezes.grid(column=4, row=4, )
 butaoDivisao=tk.Button(janela, text="/", width=11, height=3, font=("Arial", 15), command=lambda:inserir_texto("/"))
 butaoDivisao.grid(column=4, row=5, )
-butaoCezinho=tk.Button(janela, text="C", width=8, height=3, font=("Arial", 15), command=lambda:inserir_texto("/"))
-butaoCezinho.grid(column=1, row=5, )
-butaoElevado=tk.Button(janela, text="^", width=8, height=3, font=("Arial", 15), command=lambda:inserir_texto("**"))
-butaoElevado.grid(column=3, row=5, )
-butaoQuadrada=tk.Button(janela, text="/1", width=8, height=3, font=("Arial", 15), command=lambda:inserir_texto("/1"))
-butaoQuadrada.grid(column=2, row=5, )
+butaoCezinho=tk.Button(janela, text="C", width=8, height=3, font=("Arial", 15), command=lambda:apagar_tudo())
+butaoCezinho.grid(column=3, row=5, )
+butaoElevado=tk.Button(janela, text="^", width=11, height=3, font=("Arial", 15), command=lambda:inserir_texto("**"))
+butaoElevado.grid(column=4, row=1, )
 
 
 
 
-janela.geometry("425x516")
+janela.geometry("425x510")
 janela.mainloop()
