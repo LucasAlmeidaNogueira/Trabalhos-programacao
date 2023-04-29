@@ -38,13 +38,12 @@ class Planet:
 		self.x_vel = 0
 		self.y_vel = 0
 	
-while True:
+running=True
+while running:
     terra=pygame.draw.circle(WIN,BLUE,(100,100),2,3)
     pygame.display.flip()
     clock.tick (60)
+    
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-
-
-#pygame.display.quit
