@@ -79,10 +79,10 @@ botao_C=tk.Button(janela, text="C",command=lambda:apagar(),width=27, height=4,fo
 botao_C.grid(column=3,row=6,columnspan=2)
 botao_potencia=tk.Button(janela, text="^",command=lambda:inserir_texto("**"),width=13, height=4,font=("Arial",12))
 botao_potencia.grid(column=6,row=2)
-botao_Raiz=tk.Button(janela, text="√",command=lambda:inserir_texto("**1/2"),width=13, height=4,font=("Arial",12))
-botao_Raiz.grid(column=6,row=3,columnspan=1)
-botao_Raiz=tk.Button(janela, text="/1",command=lambda:inserir_texto("1/"),width=13, height=4,font=("Arial",12))
-botao_Raiz.grid(column=6,row=4,columnspan=1)
+botao_Raiz=tk.Button(janela, text="√",command=lambda:inserir_texto("**1/2"),width=13, height=9,font=("Arial",12))
+botao_Raiz.grid(column=6,row=3,columnspan=1, rowspan=2)
+botao_Raiz=tk.Button(janela, text="/1",command=lambda:inserir_texto("1/"),width=13, height=9,font=("Arial",12))
+botao_Raiz.grid(column=6,row=5,columnspan=1, rowspan=2)
 
 
 janela.mainloop()
