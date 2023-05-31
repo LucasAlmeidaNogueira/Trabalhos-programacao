@@ -2,7 +2,6 @@
 
 lista=[2,6,1,23,6,8,1]
 x=len(lista)
-a=int(input())
 
 for i in range(x):
     
