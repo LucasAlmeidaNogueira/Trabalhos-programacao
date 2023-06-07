@@ -81,7 +81,7 @@ botao_potencia=tk.Button(janela, text="^",command=lambda:inserir_texto("**"),wid
 botao_potencia.grid(column=6,row=2)
 botao_Raiz=tk.Button(janela, text="√",command=lambda:inserir_texto("**1/2"),width=13, height=9,font=("Arial",12))
 botao_Raiz.grid(column=6,row=3,columnspan=1, rowspan=2)
-botao_Raiz=tk.Button(janela, text="/1",command=lambda:inserir_texto("/1"),width=13, height=9,font=("Arial",12))
+botao_Raiz=tk.Button(janela, text="1/",command=lambda:inserir_texto("1/"),width=13, height=9,font=("Arial",12))
 botao_Raiz.grid(column=6,row=5,columnspan=1, rowspan=2)
 
 
